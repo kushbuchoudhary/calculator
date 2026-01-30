@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<h3>Simple Calculator</h3>
+
+<input type="number" id="n1" placeholder="First number"><br><br>
+<input type="number" id="n2" placeholder="Second number"><br><br>
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()">Mul</button>
+<button onclick="div()">Div</button>
+
+<p id="result"></p>
+
+<script>
+function add() {
+    var a = Number(document.getElementById("n1").value);
+    var b = Number(document.getElementById("n2").value);
+    document.getElementById("result").innerHTML = "Result = " + (a + b);
+}
+
+function sub() {
+    var a = Number(document.getElementById("n1").value);
+    var b = Number(document.getElementById("n2").value);
+    document.getElementById("result").innerHTML = "Result = " + (a - b);
+}
+
+function mul() {
+    var a = Number(document.getElementById("n1").value);
+    var b = Number(document.getElementById("n2").value);
+    document.getElementById("result").innerHTML = "Result = " + (a * b);
+}
+
+function div() {
+    var a = Number(document.getElementById("n1").value);
+    var b = Number(document.getElementById("n2").value);
+    document.getElementById("result").innerHTML = "Result = " + (a / b);
+}
+</script>
+
+</body>
+</html>
