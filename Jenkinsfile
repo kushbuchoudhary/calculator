@@ -1,20 +1,25 @@
-pipeline{
-  agent any
-  stages{
-    stage('clone'){
-      steps{
-        git branch:'main',url:'https://github.com/kushbuchoudhary/Calculator.java'
-          
-      }
-      stage('compile'){
-        steps{
-          sh'javac Calculator.java'
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/kushbuchoudhary/calculator.git'
+            }
         }
-      }
-      stage('build'){
-        steps{
-          sh'java Calculator 25 5'}
-      }
+
+        stage('Compile') {
+            steps {
+                sh 'javac Calculator.java'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                sh 'java Calculator 25 5'
+            }
+        }
+
     }
-  }
-  
+}
